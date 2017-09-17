@@ -1,0 +1,244 @@
+<head>
+  <title>Digital Asset Meteor</title>
+</head>
+
+<body style="background-color:#B2BEB5;">
+<div style="color:#0000FF">
+ <h1><marquee direction="right"><b>Welcome to Digital Asset Token page !</b></marquee></h1>
+
+</div>
+<!-- {{> request}}  -->
+   {{> time}} 
+  
+  <table style="width:100%">
+  <tr>
+  <th>
+  {{> hello8}} 
+  </th>
+  <th>
+  {{> hello9}}
+  </th>
+  <th>
+  
+  {{> hello3}}
+  </th>
+  <th>
+
+  {{> hello}}
+  </th>
+  </tr>
+  </table>
+  <!-- 
+  {{> hello10}} -->
+  <br><br><br>
+
+  <table style="width:100%">
+  <tr>
+   <th>
+    {{> hello1}}
+</th>
+<th>
+  {{> hello2}}
+ </th>
+ <th>  
+   {{> hello4}} 
+   </th>
+   <th>
+    {{> hello11}} 
+    </th>
+    </tr>
+    </table>
+    <br><br>
+
+    <table style="width:100%">
+  <tr>
+   <th>
+  
+     {{> hello5}} 
+     </th>
+     <th> 
+    {{> hello6}} 
+ </th>
+ <th>
+    {{> hello7}}
+    </th>
+    <th>
+    {{> hello12}} 
+    </th>
+</tr>
+</table><br><br>
+ <table style="width:100%">
+  <tr>
+  <th>
+   
+   <td height="100">
+ {{> request}}  
+ </td>
+ </th>
+ <th>
+ <td height="100">
+  {{> transferFrom}}
+  </td>
+  </th>
+  <th>
+  <td height="100">
+  {{> sell}} 
+  </td>
+  </th>
+  <th>
+  <td height="100">
+  {{> addvid}} 
+  </td>
+  </th>
+  </tr>
+  </table>
+ <style type="text/css">
+h1 {
+    background-color: yellow;
+}
+
+div {
+    background-color: lightblue;
+}
+
+
+
+</style>
+</body>
+
+<template name="request">
+<form>
+  Your Name     :   <input type=text pattern="[a-z]{3,15}" class='ClientName' name='ClientName' id='ClientName' required /><br>
+  Your Email    :   <input  name='ClientEmail' class='ClientEmail' id='ClientEmail' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required /><br>
+  Your Address  :   <input type="text" class="ClientAddress" name='ClientAddress' id='ClientAddress' required /><br>
+  Your amount   :   <input type=number class="amount" name='amount' id='amount' required /><br><br>
+  <button id="request_token" type="button">Request Token</button>  <input type="reset"> <input type="button" id="go_to_vedio" disabled= "disabled" onclick="location.href='https://www.youtube.com/watch?v=2iF73cybTBs';" value="Go to Vedio" />
+  <br>
+  </form>
+</template>
+
+
+<template name="hello">
+  <button> Contract Balance</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}} eth </p>
+</template>
+
+<template name="hello1">
+  <button>Check Balance token-receiver 1</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+<template name="hello2">
+  <button>Check Balance token-receiver 2</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+
+<template name="hello4">
+  <button>Check Balance token-receiver 3</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+
+<template name="hello11">
+  <button>Check Balance token-receiver 4</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+
+<template name="hello3">
+<button> initialSupply</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+
+<template name="hello5">
+<button>Check token balance of token-receiver1</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template> 
+
+
+<template name="hello6">
+<button>Check token balance of token-receiver2</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+<template name="hello7">
+<button>Check token balance of token-receiver3</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+
+<template name="hello12">
+<button>Check token balance of token-receiver4</button>
+  <p style="color:red;">{{counter}} {{TemplateVar.get "counter"}}</p>
+</template>
+
+<template name="hello8">
+<button>Token Name</button>
+  <p style="color:red;"><b>{{counter}} {{TemplateVar.get "counter"}}</b></p>
+</template>
+
+<!-- <template name="hello9">
+<button>Symbol</button>
+ <img  border="0" width="150" hight="150" src='/images/t4_b.png' />
+</template> -->
+
+<template name="hello9">
+ <img  border="0" width="90" hight="60" src='/images/Golden_Token.png' />
+</template>
+
+<!-- <template name="hello10">
+<button>Token Name</button>
+  <p style="color:red;"><b>{{counter}} {{TemplateVar.get "counter"}}</b></p>
+</template> -->
+
+
+<!-- <template name="request">
+  <button>Request Token</button>
+</template> -->
+<!-- <template name="transferFrom">
+  <button>Forward Token</button>
+</template> -->
+
+<template name="transferFrom">
+<style type="text/css">
+    form {
+        text-align: right;
+    }
+    input {
+        width: 100px;
+    }
+    </style>
+<form>
+  Your Name           :   <input type=text pattern="[a-z]{3,15}" name='ClientName1' id='ClientName1' required /><br>
+  From Address        :   <input align="center" type=text name='ClientAddress2' id='ClientAddress2' required/><br>
+  Reciever Address    :   <input align="center" type=text name='ClientAddress1' id='ClientAddress1' required/><br>
+  Amount              :    <input type=number name='amount1' id='amount1' required /><br><br>
+  <button >Transfer Token</button>  <input type="reset"> 
+  
+  <br>
+  </form>
+</template>
+
+<template name="sell">
+<form>
+
+   Your Name         :       <input type=text pattern="[a-z]{3,15}" name='ClientName2' id='ClientName2' required /><br>
+From Address    : <input type=text name='ClientAddress3' id='ClientAddress3' required/><br>
+ Your amount    :    <input type=number name='amount2' id='amount2' required/><br><br><button>Sell</button>  <input type="reset"> 
+  </form>
+  </template>
+
+
+  
+
+<template name="time">
+  <h3 > {{timeVal}}</h3>
+</template>
+
+<template name="addVid">
+  <form>
+
+   Video Address         :       <input type=string  name='vidAddress' id='vidAddress' required /><br>
+Token Supply    : <input type=number name='supply' id='supply' required/><br>
+ Video Name    :    <input type=text name='videoName' id='videoName' required/><br>
+ Owner Address    :    <input type=string name='ownerAddress' id='ownerAddress' required/><br>
+ Token Buy Price    :    <input type=number name='buyPrice' id='buyPrice' required/>
+ <br><br><button>Add Vedio</button>  <input type="reset"> 
+  </form>
+  
+</template>
